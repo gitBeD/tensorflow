@@ -16,7 +16,6 @@ node_sub = node_mul - b
 with tf.Session() as session:
     writer = tf.summary.FileWriter('./first_step', session.graph)
     init = tf.global_variables_initializer()
-    #quelltext hat ein Leerzeichen vor initializer()
     print(session.run(node_sub, {a:2.0}))
 
 writer.close()
